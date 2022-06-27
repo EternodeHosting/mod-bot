@@ -1,0 +1,3 @@
+# mod-bot
+Bot de modération Eternode
+Encore en cours de devloppement...
