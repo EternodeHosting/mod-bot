@@ -1,35 +1,7 @@
-const { Client, Intents, Collection } = require("discord.js")
+const Discord = require("discord.js")
 const { readdirSync } = require("fs")
+const client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_VOICE_STATES', 'DIRECT_MESSAGES', 'GUILD_PRESENCES', 'GUILD_BANS'], partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
-const client = new Client({
-
-    intents: [
-
-        'GUILDS', 
-
-        'GUILD_MEMBERS', 
-
-        'GUILD_MESSAGES', 
-
-        'GUILD_MESSAGE_REACTIONS', 
-
-        'DIRECT_MESSAGES', 
-
-        'DIRECT_MESSAGE_REACTIONS', 
-
-        'DIRECT_MESSAGE_TYPING', 
-
-        'GUILD_BANS', 
-
-        'GUILD_INTEGRATIONS', 
-
-        'GUILD_INVITES', 
-
-        'GUILD_PRESENCES'
-
-    ]
-
-})
 const config = require("./config")
 const commands = new Collection()
 
