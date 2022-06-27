@@ -49,13 +49,7 @@ client.on("ready", () => {
     client.user.setPresence({ activities: [{ name: '/help | EcoBot' }], status: 'WATCHING' });
 })
 
-let y = process.openStdin()
-y.addListener("data", res => {
 
-let x = res.toString().trim().split(/ +/g)
-client.guilds.cache.get("947114184825532476").channels.cache.get("947179962656489523").send(x.join(" "));
-console.log(x.join(" ") + " a été envoyer")
-});
 
 
 client.on("interactionCreate", (interaction) => {
