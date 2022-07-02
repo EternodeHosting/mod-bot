@@ -3,7 +3,7 @@ const { readdirSync } = require("fs")
 const client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_VOICE_STATES', 'DIRECT_MESSAGES', 'GUILD_PRESENCES', 'GUILD_BANS'], partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
 const config = require("./config")
-const commands = new Collection()
+const commands = new Discord.Collection()
 
 const files = readdirSync("./commands")
 const filesName = files.map(file => file.replace(".js", ""))
