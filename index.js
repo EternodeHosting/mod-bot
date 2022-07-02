@@ -18,7 +18,7 @@ client.on("ready", () => {
     console.log("----------------------")
     console.log("ready with " + client.user.tag)
     console.log("----------------------")
-    client.user.setPresence({ activities: [{ name: '/help | EcoBot' }], status: 'WATCHING' });
+    client.user.setPresence({ activities: [{ name: '/help | EterNode' }], status: 'WATCHING' });
 })
 
 
