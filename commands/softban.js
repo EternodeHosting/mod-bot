@@ -26,8 +26,7 @@ class commandsoftban {
 
         if(!user.bannable) return interaction.reply({content: `This user can't be softbanned. It is either because they are a moderator/admin, or their role is higher than the bot role.`, ephemeral: true});
 
-        await user.ban({reason: reason !== null ? `${reason}` : 'No reason specified'});
-        await interaction.guild.members.unban(user, reason);
+        await user.ban({reason: reason !== null ? `${reason}` : 'No reason specified'}).then => interaction.guild.members.unban(user, reason);
         await interaction.reply(`Successfully softbanned **${user.user.username}** \`[${user.user.id}]\` for the reason: **${reason !== null ? `${reason}` : 'No reason specified'}**`);
       
     }
